@@ -30,3 +30,10 @@ func WriteFile(lines []string){
 	}
 }
 
+func ReadFile() string{
+	content, err := os.ReadFile(FILENAME)
+	if err != nil {
+		log.Fatalln("Error reading file...")
+	}
+	return string(content)
+}
